@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         content.title = "打我啊笨蛋"
         content.subtitle = "哈哈"
         content.body = "還敢下來啊冰鳥"
-        content.badge = 999
+        content.badge = 888
         content.sound = UNNotificationSound.default
         content.categoryIdentifier = "alarmMessage"
 
