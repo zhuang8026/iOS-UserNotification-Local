@@ -13,13 +13,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        // 設定通知權限
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge, .carPlay]) { (granted, error) in
             
             if granted {
-                print("Allowed")
-            }
-            else {
-                print("Not Allowed")
+                print("允許開啟")
+            } else {
+                print("拒絕接受開啟")
             }
         }
         

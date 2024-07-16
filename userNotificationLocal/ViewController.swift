@@ -26,9 +26,6 @@ class ViewController: UIViewController {
         
         // createNotification()
 
-        // 設定通知權限
-        requestNotificationAuthorization()
-
         // 建立按鈕
         let button = UIButton(type: UIButton.ButtonType.system)
         button.setTitle("發送通知", for: UIControl.State.normal)
@@ -49,13 +46,6 @@ class ViewController: UIViewController {
         
     }
     
-    func requestNotificationAuthorization() {
-        let center = UNUserNotificationCenter.current()
-        center.requestAuthorization(options: [.alert, .badge, .sound]) { granted, error in
-            // 處理授權結果
-        }
-    }
-
     @objc func sendNotification() {
         createNotification()
     }
